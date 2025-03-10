@@ -16,6 +16,11 @@ packages:
   gitUrl: https://github.com/Karthik-V-IBM-10
   gitUsername: Karthik-V-IBM-10
   gitBranch: main
+- name: SSL_JDBC_Test
+  gitServerName: SIQAPsur
+  gitUrl: https://github.com/prabhakarsag
+  gitUsername: prabhakarsag
+  gitBranch: main
 services:
 - serviceName: project.siqa_1003_azpp.integrations:tppfs
   packages:
@@ -32,40 +37,32 @@ services:
   - name: WmPublic
     version: 11.1.0.0.2028
 configurationVariables:
-  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.maximumPoolSize
-  : "10"
-  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionEnabled
-  : "false"
-  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.transactionType
-  : NO_TRANSACTION
-  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.expireTimeout
-  : "1000"
-  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.serverName
-  : vmiboint01
-  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.databaseName
-  : SIQACloud
-  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.minimumPoolSize
-  : "1"
-  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.trustStore
-  : ""
-  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.otherProperties
-  : loginTimeout=60;driverType=thin;
+  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.networkProtocol
+  : tcp
   ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.portNumber
   : "1433"
   ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.blockingTimeout
   : "1000"
-  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.password
-  : "{AES}B2Xqma4Ost5nVUiXctJydQ=="
-  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.user
-  : sa
-  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolIncrementSize
+  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.maximumPoolSize
+  : "10"
+  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.minimumPoolSize
   : "1"
-  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.networkProtocol
-  : tcp
   ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolable
   : "false"
+  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.transactionType
+  : NO_TRANSACTION
+  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionEnabled
+  : "false"
+  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.expireTimeout
+  : "1000"
   ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.dbType
   : MSSQL
+  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.trustStore
+  : ""
+  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.otherProperties
+  : loginTimeout=60;driverType=thin;
+  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.password
+  : "{AES}B2Xqma4Ost5nVUiXctJydQ=="
   ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.driverType
   : Progress® DataDirect®
   ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.datasourceClass
@@ -74,7 +71,15 @@ configurationVariables:
   : ""
   ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupBackoffSecs
   : "10"
+  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.user
+  : sa
+  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolIncrementSize
+  : "1"
   ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.heartBeatInterval
   : "0"
   ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupRetryCount
   : "0"
+  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.serverName
+  : vmiboint01
+  ? artConnection.SIQA_1003_AZPPProject.project.siqa_1003_azpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.databaseName
+  : SIQACloud
